@@ -14,14 +14,14 @@
 				<Button text="New">
 					<graphic>
 						<ImageView>
-							<image><Image url ="@../icons/new.png"/></image>
+							<image><Image url ="icons/new.png"/></image>
 						</ImageView>
 					</graphic>
 				</Button>
-				<Button text = "Opne">
+				<Button text = "Open">
 					<graphic>
 						<ImageView>
-							<image><Image url="@../icons/open.png"/></image>
+							<image><Image url="icons/open.png"/></image>
 						</ImageView>
 					</graphic>
 				</Button>
@@ -29,7 +29,7 @@
 				<Button text = "Save">
 					<graphic>
 						<ImageView>
-							<image><Image url ="@../icons/save.png"/></image>
+							<image><Image url ="icons/save.png"/></image>
 						</ImageView>
 					</graphic>
 				</Button>

@@ -13,7 +13,7 @@
 		<Insets topRightBottomLeft="10" />
 	</padding>
 	<children>
-		<ImageView fitWidth="300" preserveRatio="true">
+		<ImageView fitWidth="300" >
 			<image>
 				<Image url="@../panes/images/javafx.jpg" />
 			</image>
