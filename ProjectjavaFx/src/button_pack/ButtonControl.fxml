@@ -7,29 +7,44 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane prefHeight="150.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+			fx:controller="button_pack.ButtonController">
    <padding>
       <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
    </padding>
    <center>
-      <HBox fx:id="vbox" prefHeight="350.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+      <HBox fx:id="vbox" prefHeight="100.0" prefWidth="450.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox prefHeight="100.0" prefWidth="200.0">
+            <VBox prefHeight="100.0" prefWidth="100.0" spacing="20">
                <children>
-                  <CheckBox mnemonicParsing="false" text="CheckBox" />
-                  <CheckBox mnemonicParsing="false" text="CheckBox" />
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <CheckBox fx:id="chk1" text="안경" onAction="#handleCheckAction"/>
+                  <CheckBox fx:id="chk2" text="모자" onAction="#handleCheckAction"/>
                </children></VBox>
-            <VBox prefHeight="200.0" prefWidth="100.0">
+            <ImageView fx:id="imageView" fitHeight="100.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Desktop/Javaimages/geek.gif" />
+               </image>
+            </ImageView>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="20">
+            	<fx:define>
+            		<ToggleGroup fx:id ="group"></ToggleGroup>
+            	</fx:define>
                <children>
-                  <RadioButton mnemonicParsing="false" text="RadioButton" />
-                  <RadioButton mnemonicParsing="false" text="RadioButton" />
+                  <RadioButton toggleGroup="$group" fx:id="rad1" text="BubbleChart" selected ="true" />
+                  <RadioButton toggleGroup="$group" fx:id="rad2" text="BarChart" />
+                  <RadioButton toggleGroup="$group" fx:id="rad3" text="AreaChart" />
                </children>
             </VBox>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Desktop/Javaimages/BubbleChart.png" />
+               </image>
+            </ImageView>
          </children>
       </HBox>
    </center>
    <bottom>
-      <Button mnemonicParsing="false" text="Button" BorderPane.alignment="CENTER" />
+      <Button text="Button" BorderPane.alignment="CENTER" />
    </bottom>
 </BorderPane>
