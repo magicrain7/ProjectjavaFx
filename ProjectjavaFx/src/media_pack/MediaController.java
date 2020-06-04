@@ -3,6 +3,8 @@ package media_pack;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -54,7 +56,7 @@ public class MediaController implements Initializable {
 			@Override
 			public void run() {
 				btnPlay.setDisable(false);
-				btnStop.setDisable(true);
+				btnStop.setDisable(false);
 				btnPause.setDisable(true);
 			}
 		});
@@ -62,7 +64,7 @@ public class MediaController implements Initializable {
 			@Override
 			public void run() {
 				btnPlay.setDisable(false);
-				btnStop.setDisable(false);
+				btnStop.setDisable(true);
 				btnPause.setDisable(true);
 			}
 		});	
@@ -71,18 +73,18 @@ public class MediaController implements Initializable {
 			@Override
 			public void run() {
 				btnPlay.setDisable(false);
-				btnStop.setDisable(false);
+				btnStop.setDisable(true);
 				btnPause.setDisable(true);
 			}
 		});
 
-//		btnPlay.setOnAction(new EventHandler<ActionEvent>() {
-//			@Override
-//			public void handle(ActionEvent arg0) {
-//				player.play();
-//			}
-//		});
-		btnPlay.setOnAction((e) -> player.play());
+		btnPlay.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent arg0) {
+				player.play();
+			}
+		});
+//		btnPlay.setOnAction((e) -> player.play());
 		btnStop.setOnAction((e) -> player.stop());
 		btnPause.setOnAction((e) -> player.pause());
 
