@@ -10,7 +10,8 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.Label?>
 
-<AnchorPane prefHeight="350" prefWidth="500" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_pack.BoardController">
+<AnchorPane prefHeight="350" prefWidth="500" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" 
+		fx:controller="view_pack.BoardController">
 	<children>
 		<TableView fx:id="tableView" layoutX="25" layoutY="55" prefHeight="241" prefWidth="175" />
 		<TextField layoutX="283" layoutY="51" prefHeight="23" prefWidth="192" />

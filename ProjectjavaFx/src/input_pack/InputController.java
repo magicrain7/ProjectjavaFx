@@ -1,4 +1,5 @@
 package input_pack;
+
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -119,7 +120,7 @@ public class InputController implements Initializable {
 		button.setLayoutX(336);
 		button.setLayoutY(104);
 		button.setOnAction(e -> customStage.close());
-		
+
 		Label label = new Label(message);
 		label.setLayoutX(87);
 		label.setLayoutY(33);
