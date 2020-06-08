@@ -59,7 +59,7 @@ public class InputController implements Initializable {
 			e.printStackTrace();
 		}
 	}
-
+	
 	public void handleBtnRegAction(ActionEvent e) {
 		if (txtTitle.getText() == null || txtTitle.getText().equals("")) {
 			messageDialog("제목 입력하세요.");
@@ -105,7 +105,7 @@ public class InputController implements Initializable {
 		customStage.initModality(Modality.WINDOW_MODAL);
 		customStage.initOwner(btnReg.getScene().getWindow());
 		customStage.setTitle("확인");
-
+		
 		AnchorPane ap = new AnchorPane();
 		ap.setPrefSize(400, 150);
 
@@ -120,21 +120,21 @@ public class InputController implements Initializable {
 		button.setLayoutX(336);
 		button.setLayoutY(104);
 		button.setOnAction(e -> customStage.close());
-
+		
 		Label label = new Label(message);
 		label.setLayoutX(87);
 		label.setLayoutY(33);
 		label.setPrefHeight(15);
 		label.setPrefWidth(290);
-
+		
 		ap.getChildren().add(imageView);
 		ap.getChildren().add(button);
 		ap.getChildren().add(label);
-
+		
 		Scene scene = new Scene(ap);
 		customStage.setScene(scene);
 		customStage.show();
-
+		
 	}
 
 	public void messagePopup(String message) {

@@ -126,19 +126,21 @@ public class StageController implements Initializable {
 			}
 			seriesKorean.setData(datasKorean);
 			seriesKorean.setName("국어");
+			
+			
 			XYChart.Series<String, Integer> seriesMath = new XYChart.Series<String, Integer>();
 			ObservableList<XYChart.Data<String, Integer>> datasMath = FXCollections.observableArrayList();
 			for (int i = 0; i < scores.size(); i++) {
 				datasMath.add(new XYChart.Data(scores.get(i).getName(), scores.get(i).getMath()));
-				
 			}
 			seriesMath.setData(datasMath);
 			seriesMath.setName("수학");
+			
+			
 			XYChart.Series<String, Integer> seriesEnglish = new XYChart.Series<String, Integer>();
 			ObservableList<XYChart.Data<String, Integer>> datasEnglish = FXCollections.observableArrayList();
 			for (int i = 0; i < scores.size(); i++) {
 				datasEnglish.add(new XYChart.Data(scores.get(i).getName(), scores.get(i).getEnglish()));
-				
 			}
 			seriesEnglish.setData(datasEnglish);
 			seriesEnglish.setName("영어");
