@@ -49,20 +49,18 @@ public class StageController implements Initializable {
 			}
 		});
 
-		// Addform에서 cart 버튼
+		// Addform
 		btnChart.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent arg0) {
 				buttonChartAction(arg0);
 			}
 		});
-
+		
 		TableColumn<Student, ?> tcName = tableView.getColumns().get(0);
 		tcName.setCellValueFactory(new PropertyValueFactory("name"));
-
 		TableColumn<Student, ?> tcKorean = tableView.getColumns().get(1);
 		tcKorean.setCellValueFactory(new PropertyValueFactory("korean"));
-
 		TableColumn<Student, ?> tcMath = tableView.getColumns().get(2);
 		tcMath.setCellValueFactory(new PropertyValueFactory("math"));
 
@@ -97,12 +95,12 @@ public class StageController implements Initializable {
 					TextField txtEnglish = (TextField) parent.lookup("#txtEnglish");
 					Student student = new Student(txtName.getText(), Integer.parseInt(txtKorean.getText()),
 							Integer.parseInt(txtMath.getText()), Integer.parseInt(txtEnglish.getText()));
-
+					
 					scores.add(student);
 					addStage.close();
 				}
 			});
-
+					
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

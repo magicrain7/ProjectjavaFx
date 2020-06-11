@@ -79,7 +79,7 @@ public class HomeController implements Initializable {
 	public void initialize(URL url, ResourceBundle rb) {
 		// TODO
 		txtGender.getItems().addAll("Male", "Female", "Other");
-		txtGender.getSelectionModel().select("Male");
+		txtGender.getSelectionModel().select("Female");
 		fetColumnList();
 //		fetRowList();
 		clearFields();
@@ -237,7 +237,7 @@ public class HomeController implements Initializable {
 					return new SimpleStringProperty(param.getValue().getId());
 				}
 			});
-
+			
 			TableColumn<User, String> colfName = new TableColumn<>("FName");
 			colfName.setCellValueFactory(new Callback<CellDataFeatures<User, String>, ObservableValue<String>>() {
 				@Override
@@ -245,7 +245,7 @@ public class HomeController implements Initializable {
 					return new SimpleStringProperty(param.getValue().getFirstName());
 				}
 			});
-
+			
 			TableColumn<User, String> collName = new TableColumn<>("LName");
 			collName.setCellValueFactory(new Callback<CellDataFeatures<User, String>, ObservableValue<String>>() {
 				@Override
@@ -253,7 +253,7 @@ public class HomeController implements Initializable {
 					return new SimpleStringProperty(param.getValue().getLastName());
 				}
 			});
-
+			
 			TableColumn<User, String> colEmail = new TableColumn<>("Email");
 			colEmail.setCellValueFactory(new Callback<CellDataFeatures<User, String>, ObservableValue<String>>() {
 				@Override
@@ -261,7 +261,7 @@ public class HomeController implements Initializable {
 					return new SimpleStringProperty(param.getValue().getEmail());
 				}
 			});
-
+			
 			TableColumn<User, String> colbDate = new TableColumn<>("BirthDate");
 			colbDate.setCellValueFactory(new Callback<CellDataFeatures<User, String>, ObservableValue<String>>() {
 				@Override
@@ -269,10 +269,10 @@ public class HomeController implements Initializable {
 					return new SimpleStringProperty(param.getValue().getBirthDate());
 				}
 			});
-
+			
 //			tblData.getColumns().removeAll(col);
 			tblData.getColumns().addAll(colId, colfName, collName, colEmail, colbDate);
-
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
