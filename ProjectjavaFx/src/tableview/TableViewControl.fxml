@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="350.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="tableview.TableViewController">
+   <children>
+      <TableView fx:id="tableView" layoutX="25.0" layoutY="66.0" prefHeight="200.0" prefWidth="550.0">
+      </TableView>
+      <Button fx:id="btnSave" layoutX="251.0" layoutY="290.0" mnemonicParsing="false" text="save" />
+   </children>
+</AnchorPane>
